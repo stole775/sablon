@@ -1,0 +1,11 @@
+<h1>Detalji Mobilnog Telefona</h1>
+
+<div *ngIf="smartphone">
+  <div class="smartphone-detail">
+    <img [src]="smartphone.image" alt="Slika mobilnog telefona" />
+    <h2>{{ smartphone.brand }} {{ smartphone.model }}</h2>
+    <p>ID: {{ smartphone.id }}</p>
+    <p>Video: <a [href]="smartphone.video" target="_blank">{{ smartphone.video }}</a></p>
+    <button (click)="goBack()">Nazad na Listu</button>
+  </div>
+</div>

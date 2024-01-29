@@ -1,0 +1,21 @@
+<h2>Kreiraj Novi Mobilni Telefon</h2>
+
+<form [formGroup]="smartphoneForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="brand">Brend</label>
+    <input type="text" id="brand" formControlName="brand" required>
+  </div>
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" id="model" formControlName="model" required>
+  </div>
+  <div class="form-group">
+    <label for="image">Slika (URL)</label>
+    <input type="text" id="image" formControlName="image" required>
+  </div>
+  <div class="form-group">
+    <label for="video">Video (URL)</label>
+    <input type="text" id="video" formControlName="video" required>
+  </div>
+  <button type="submit" [disabled]="!smartphoneForm.valid">Kreiraj</button>
+</form>

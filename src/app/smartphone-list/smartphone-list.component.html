@@ -1,0 +1,12 @@
+<h1>Lista Mobilnih Telefona</h1>
+<input type="text" [(ngModel)]="searchKeyword" placeholder="Pretraži mobilne telefone..." />
+
+<div *ngFor="let smartphone of smartphones">
+  <div class="smartphone-card">
+    <img [src]="smartphone.image" alt="Slika mobilnog telefona" />
+    <h2>{{ smartphone.brand }} {{ smartphone.model }}</h2>
+    <button (click)="viewDetails(smartphone.id)">Pregledaj Detalje</button>
+    <button (click)="deleteSmartphone(smartphone.id)">Obriši</button>
+    <button (click)="editSmartphone(smartphone.id)">Ažuriraj</button>
+  </div>
+</div>
